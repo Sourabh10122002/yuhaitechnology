@@ -1,0 +1,101 @@
+
+
+.btn_one {
+    position: relative;
+    display: inline-block;
+    background: #2eca7f;
+    font-size: 15px;
+    padding: 10px 30px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 100px;
+    box-shadow: 10px 15px 18px rgba(23, 23, 36, 0.1);
+    z-index: 0;
+    overflow: visible;
+    transition: color 0.3s;
+}
+
+.btn_one::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #1a2d62;
+    border-radius: 105px;
+    z-index: -1;
+    transform: scaleY(0);
+    transform-origin: top center;
+    transition: transform 0.3s ease;
+}
+
+.btn_one:hover::before {
+    transform: scaleY(1);
+}
+
+.btn_one:hover {
+    color: #fff;
+}
+
+.cta {
+    width: fit-content;
+    position: relative;
+    padding: 18px 22px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.cta:hover {
+  span,svg{
+    color: #fff;
+  }
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    background: rgba(46, 202, 127, 0.2);
+    width: 56px;
+    height: 56px;
+    transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+    width: 100%;
+    background: #2eca7f;
+    color: #fff;
+}
+
+.cta:hover svg {
+  stroke: #fff;
+}
+
+.cta span {
+    position: relative;
+    font-size: 15px;
+    color: #1a2d62;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #111;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
